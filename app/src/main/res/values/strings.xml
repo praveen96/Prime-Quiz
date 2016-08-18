@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Prime Quiz</string>
+    <string name="yesText">Yes</string>
+    <string name="noText">No</string>
+    <string name="nextText">Next</string>
+    <string name="questionStartPart">Is</string>
+    <string name="questionEndPart">, a Prime Number ?</string>
+</resources>
