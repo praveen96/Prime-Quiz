@@ -1,5 +1,6 @@
 package com.example.praveen.primequiz;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,14 +13,18 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+/**
+ * Created by Praveen Kumar Jhanwar
+ */
+
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
 
     private int randomNumber;
     private final Random randomGenerator = new Random();
-    private boolean answer = false;
+    private boolean answer = false, clickedHint = false, clickedCheat = false;
     private String number = "";
     private TextView question;
-    private Button yesButton, noButton, nextButton;
+    private Button yesButton, noButton, nextButton, hintButton, cheatButton;
 
     /* Set the UI as it looks like when the app starts without any changes due to user responses */
     private void setDefault() {
@@ -131,6 +136,27 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 nextButton.setTextColor(Color.argb(255, 255, 255, 255));
                 nextQuestion(false);
                 break;
+            case R.id.hintButton:       // if the clicked button was "HINT" button
+                if(!clickedHint) {
+                    Intent hintIntent = new Intent(getApplicationContext(), HintActivity.class);
+                    startActivity(hintIntent);
+                    clickedHint = true;
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "You have already taken Hint!", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.cheatButton:      // if the clicked button was "CHEAT" button
+                if(!clickedCheat) {
+                    Intent cheatIntent = new Intent(getApplicationContext(), CheatActivity.class);
+                    cheatIntent.putExtra("number", randomNumber);
+                    startActivity(cheatIntent);
+                    clickedCheat = true;
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "You have already seen the Cheat!", Toast.LENGTH_SHORT).show();
+                }
+                break;
             default:
         }
     }
@@ -146,6 +172,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         yesButton = (Button) findViewById(R.id.yesButton);
         noButton = (Button) findViewById(R.id.noButton);
         nextButton = (Button) findViewById(R.id.nextButton);
+        hintButton=(Button) findViewById(R.id.hintButton);
+        cheatButton=(Button) findViewById(R.id.cheatButton);
 
         nextQuestion(true);
 
@@ -153,6 +181,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         yesButton.setOnClickListener(this);
         noButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
+        hintButton.setOnClickListener(this);
+        cheatButton.setOnClickListener(this);
     }
 
     @Override

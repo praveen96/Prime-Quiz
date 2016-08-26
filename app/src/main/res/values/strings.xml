@@ -5,4 +5,7 @@
     <string name="nextText">Next</string>
     <string name="questionStartPart">Is</string>
     <string name="questionEndPart">, a Prime Number ?</string>
+    <string name="hintText">Hint</string>
+    <string name="cheatText">Cheat</string>
+    <string name="hintString">A Prime number has only 2 factors:1 and the number itself!</string>
 </resources>

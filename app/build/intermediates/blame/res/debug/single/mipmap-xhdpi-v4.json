@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Praveen\\AndroidStudioProjects\\PrimeQuiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Praveen\\AndroidStudioProjects\\PrimeQuiz\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Praveen\\AndroidStudioProjects\\Prime-Quiz\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Praveen\\AndroidStudioProjects\\Prime-Quiz\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }

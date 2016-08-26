@@ -229,6 +229,9 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Prime Quiz</string>
+    <string name="cheatText">Cheat</string>
+    <string name="hintString">A Prime number has only 2 factors:1 and the number itself!</string>
+    <string name="hintText">Hint</string>
     <string name="nextText">Next</string>
     <string name="noText">No</string>
     <string name="questionEndPart">, a Prime Number ?</string>
